@@ -1,15 +1,21 @@
 "use strict";
 
-// const result = confirm('You gay?');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// const answer =  prompt('Ты кто?', 'Ваше имя');
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
 
-// console.log(typeof answer);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-const arr = [];
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-arr[0] = prompt('Как тебя зовут?', '');
-arr[1] = prompt('Какая твоя фамилия?', '');
-arr[2] = prompt('Сколько тебе лет?', '');
-
-document.write(arr);
+console.log(personalMovieDB); 
